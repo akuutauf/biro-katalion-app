@@ -1,0 +1,6 @@
+Installations:
+- migrating database: php artisan migrate
+- install spatie package: composer require spatie/laravel-permission
+- publish migration and configuration spatie: php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+- migratin database: php artisan migrate
+- 
