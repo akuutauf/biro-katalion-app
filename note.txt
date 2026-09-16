@@ -1,6 +1,19 @@
-Installations:
+# Installations:
 - migrating database: php artisan migrate
 - install spatie package: composer require spatie/laravel-permission
 - publish migration and configuration spatie: php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
 - migratin database: php artisan migrate
-- 
+- add HasRoles in model User, and import the library
+- open bootstrap.app and import the middleware spatie configuration
+- and spatie ready to use
+
+# Fresh Running:
+- php artisan storage:link
+- php artisan migrate:fresh --seed
+- php artisan serve
+
+# Tips:
+- make model and migration: php artisan make:model Article -m
+- make seeder: php artisan make:seeder RolePermissionSeeder
+- run seeder (single): php artisan db:seed --class=RolePermissionSeeder
+- make controller with resource: php artisan make:controller ArticleController -r
