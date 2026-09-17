@@ -2,30 +2,35 @@
 
       <div class="container">
 
-          <div class="footer-main" data-aos="fade-up" data-aos-delay="100">
+          <div class="footer-main">
               <div class="row align-items-start">
 
                   <div class="col-lg-5">
                       <div class="brand-section">
                           <a href="index.html" class="logo d-flex align-items-center mb-4">
-                              <span class="sitename">Clinic</span>
+                              <span class="sitename">Biro Katalion</span>
                           </a>
-                          <p class="brand-description">Crafting exceptional digital experiences through thoughtful
-                              design and
-                              innovative solutions that elevate your brand presence.</p>
+                          <p class="brand-description text-justify">
+                              Sebuah pusat layanan psikologi dan pusat terapi yang berfokus pada
+                              tumbuh kembang serta pendampingan anak-anak berkebutuhan khusus
+                          </p>
 
                           <div class="contact-info mt-5">
                               <div class="contact-item">
                                   <i class="bi bi-geo-alt"></i>
-                                  <span>123 Creative Boulevard, Design District, NY 10012</span>
+                                  <span>Jl. Aruji Karta Winata, Alas Malang,
+                                      Kec. Singojuruh, <br>Kab. Banyuwangi - Jawa Timur 68464
+                                  </span>
                               </div>
                               <div class="contact-item">
                                   <i class="bi bi-telephone"></i>
-                                  <span>+1 (555) 987-6543</span>
+                                  <a target="_blank" class="text-none text-theme-grey"
+                                      href="https://wa.me/6281233024044">0812-3302-4044</a>
                               </div>
                               <div class="contact-item">
                                   <i class="bi bi-envelope"></i>
-                                  <span>hello@designstudio.com</span>
+                                  <a target="_blank" class="text-none text-theme-grey"
+                                      href="mailto:birokatalion@gmail.com">birokatalion@gmail.com</a>
                               </div>
                           </div>
                       </div>
@@ -37,52 +42,45 @@
 
                               <div class="col-6 col-lg-3">
                                   <div class="nav-column">
-                                      <h6>Studio</h6>
+                                      <h6>Sosial Media</h6>
                                       <nav class="footer-nav">
-                                          <a href="#!">Our Story</a>
-                                          <a href="#!">Design Process</a>
-                                          <a href="#!">Portfolio</a>
-                                          <a href="#!">Case Studies</a>
-                                          <a href="#!">Awards</a>
+                                          <a target="_blank"
+                                              href="https://www.instagram.com/biro_katalion/">Instagram</a>
                                       </nav>
                                   </div>
                               </div>
 
                               <div class="col-6 col-lg-3">
                                   <div class="nav-column">
-                                      <h6>Services</h6>
+                                      <h6>Layanan Tes</h6>
                                       <nav class="footer-nav">
-                                          <a href="#!">Brand Identity</a>
-                                          <a href="#!">Web Design</a>
-                                          <a href="#!">Mobile Apps</a>
-                                          <a href="#!">Digital Strategy</a>
-                                          <a href="#!">Consultation</a>
+                                          <a href="#!">Tes Intelgensi (IQ)</a>
+                                          <a href="#!">Tes Bakat Minat</a>
+                                          <a href="#!">Tes Kesiapan Belajar Masuk Sekolah</a>
+                                          <a href="#!">Bimbel dan Pelatihan TNI, Polri</a>
                                       </nav>
                                   </div>
                               </div>
 
                               <div class="col-6 col-lg-3">
                                   <div class="nav-column">
-                                      <h6>Resources</h6>
+                                      <h6>Layanan Terapi</h6>
                                       <nav class="footer-nav">
-                                          <a href="#!">Design Blog</a>
-                                          <a href="#!">Style Guide</a>
-                                          <a href="#!">Free Assets</a>
-                                          <a href="#!">Tutorials</a>
-                                          <a href="#!">Inspiration</a>
+                                          <a href="#!">Konsultasi</a>
+                                          <a href="#!">Layanan ABK</a>
+                                          <a href="#!">Psikoterapi ABK</a>
                                       </nav>
                                   </div>
                               </div>
 
                               <div class="col-6 col-lg-3">
                                   <div class="nav-column">
-                                      <h6>Connect</h6>
+                                      <h6>Layanan Asesmen</h6>
                                       <nav class="footer-nav">
-                                          <a href="#!">Start Project</a>
-                                          <a href="#!">Schedule Call</a>
-                                          <a href="#!">Join Newsletter</a>
-                                          <a href="#!">Follow Updates</a>
-                                          <a href="#!">Partnership</a>
+                                          <a href="#!">Parenting</a>
+                                          <a href="#!">Psikotes</a>
+                                          <a href="#!">Pembacaan Hasil Tes</a>
+                                          <a href="#!">Pendampingan</a>
                                       </nav>
                                   </div>
                               </div>
@@ -98,28 +96,13 @@
 
       <div class="footer-bottom">
           <div class="container">
-              <div class="bottom-content" data-aos="fade-up" data-aos-delay="300">
-                  <div class="row align-items-center">
+              <div class="bottom-content">
+                  <div class="row justify-content-center d-flex">
 
-                      <div class="col-lg-6">
-                          <div class="copyright">
-                              <p>© <span class="sitename">Clinic</span>. All rights reserved.</p>
-                          </div>
-                      </div>
-
-                      <div class="col-lg-6">
-                          <div class="legal-links">
-                              <a href="#!">Privacy Policy</a>
-                              <a href="#!">Terms of Service</a>
-                              <a href="#!">Cookie Policy</a>
-                              <div class="credits">
-                                  <!-- All the links in the footer should remain intact. -->
-                                  <!-- You can delete the links only if you've purchased the pro version. -->
-                                  <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                                  <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-                                  Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>. Distributed by <a
-                                      href="https://themewagon.com" target="_blank">ThemeWagon</a>
-                              </div>
+                      <div class="col-lg-6 d-flex">
+                          <div class="copyright mx-auto">
+                              <p>2023 - {{ now()->year }} &copy; <span class="sitename">Biro Katalion</span>. All
+                                  rights reserved.</p>
                           </div>
                       </div>
 
