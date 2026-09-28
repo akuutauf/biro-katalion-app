@@ -29,7 +29,24 @@
                             <li><a href="#">Panduan Website</a></li>
                         </ul>
                     </li>
-                    <li><a href="{{ route('auth.login.page') }}">Login</a></li>
+
+                    @guest
+                        <li>
+                            <a href="{{ route('auth.login.page') }}">Login</a>
+                        </li>
+                    @endguest
+
+                    @auth
+                        <li class="dropdown"><a href="#"><span>{{ Auth::user()->name }}</span> <i
+                                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <ul>
+                                <li><a href="#">Dashboard</a></li>
+                                <li><a href="{{ route('auth.do.logout') }}">Logout</a></li>
+                            </ul>
+
+                            <a href="{{ route('auth.login.page') }}"></a>
+                        </li>
+                    @endauth
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>

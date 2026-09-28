@@ -61,37 +61,37 @@ class RolePermissionSeeder extends Seeder
 
         // Create test users
         User::create([
-            'name' => 'Super Admin',
+            'name' => 'superadmin',
             'email' => 'superadmin@example.com',
             'password' => bcrypt('12345678'),
         ])->assignRole('super_admin');
 
         User::create([
-            'name' => 'Admin',
+            'name' => 'admin',
             'email' => 'admin@example.com',
             'password' => bcrypt('12345678'),
         ])->assignRole('admin');
 
         User::create([
-            'name' => 'Terapis',
+            'name' => 'terapis',
             'email' => 'terapis@example.com',
             'password' => bcrypt('12345678'),
         ])->assignRole('terapis');
 
         User::create([
-            'name' => 'Shadow',
+            'name' => 'shadow',
             'email' => 'shadow@example.com',
             'password' => bcrypt('12345678'),
         ])->assignRole('shadow');
 
         User::create([
-            'name' => 'Wali Murid',
+            'name' => 'walmur',
             'email' => 'walmur@example.com',
             'password' => bcrypt('12345678'),
         ])->assignRole('walmur');
 
         User::create([
-            'name' => 'Client',
+            'name' => 'client',
             'email' => 'client@example.com',
             'password' => bcrypt('12345678'),
         ])->assignRole('client');
