@@ -20,14 +20,16 @@
                     <li class="dropdown"><a href="#"><span>Menu Lain</span> <i
                                 class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
-                            <li><a href="#">Permohonan Konsul</a></li>
+                            <li><a href="{{ route('permohonan.konsul.page') }}">Permohonan Konsul</a></li>
                             <li><a href="#">Fasilitas Katalion</a></li>
                             <li><a href="#">Terapis Katalion</a></li>
                             <li><a href="#">Shadow Teacher</a></li>
                             <li><a href="#">Galeri Katalion</a></li>
+                            <li><a href="#">Pricelist Katalion</a></li>
+                            <li><a href="#">Panduan Website</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="{{ route('auth.login.page') }}">Login</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\PermohonanKonsulController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -18,5 +19,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         // Route Auth
         Route::get('/login', [AuthController::class, 'login'])->name('auth.login.page');
         Route::post('/login', [AuthController::class, 'do_login'])->name('auth.do.login');
+
+        // Route Permohonan Konsul
+        Route::get('/permohonan-konsul', [PermohonanKonsulController::class, 'index'])->name('permohonan.konsul.page');
     });
 });
