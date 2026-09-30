@@ -6,14 +6,14 @@
 
 @section('content')
     <!-- Log In page -->
-    <div class="row vh-100 ">
+    <div class="row vh-100">
         <div class="col-12 align-self-center">
             <div class="auth-page">
                 <div class="card auth-card shadow-lg">
                     <div class="card-body">
                         <div class="px-3">
                             <div class="auth-logo-box">
-                                <a href="#" class="logo logo-admin"><img
+                                <a href="{{ route('landing.page') }}" class="logo logo-admin"><img
                                         src="{{ asset('images/logo-biro-katalion-no-bg.png') }}" height="75"
                                         alt="logo" class="auth-logo"></a>
                             </div><!--end auth-logo-box-->
@@ -24,7 +24,9 @@
                             </div> <!--end auth-logo-text-->
 
 
-                            <form class="form-horizontal auth-form my-4" action="#">
+                            <form class="form-horizontal auth-form my-4" action="{{ route('auth.do.login') }}"
+                                method="POST">
+                                @csrf
 
                                 <div class="form-group">
                                     <label for="username">Username</label>
@@ -33,19 +35,25 @@
                                             <i class="dripicons-user"></i>
                                         </span>
                                         <input type="text" class="form-control" id="username" name="username"
-                                            placeholder="Masukkan username">
+                                            placeholder="Masukkan username" value="{{ old('username') }}">
                                     </div>
+                                    @error('username')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div><!--end form-group-->
 
                                 <div class="form-group">
-                                    <label for="userpassword">Password</label>
+                                    <label for="password">Password</label>
                                     <div class="input-group mb-3">
                                         <span class="auth-form-icon">
                                             <i class="dripicons-lock"></i>
                                         </span>
-                                        <input type="password" class="form-control" id="userpassword"
+                                        <input type="password" class="form-control" id="password"
                                             placeholder="Masukkan password" name="password">
                                     </div>
+                                    @error('password')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div><!--end form-group-->
 
                                 <div class="form-group mb-0 row">
@@ -60,7 +68,15 @@
                         <div class="m-3 text-center text-muted">
                             <p class="fw-bold">Tidak punya akun ? <a href="{{ route('auth.register.page') }}"
                                     class="text-primary ml-2">Daftar
-                                    Sekarang</a></p>
+                                    Sekarang</a>
+                            </p>
+
+                            <span>Kembali ke Halaman
+                                <a href="{{ route('landing.page') }}" class="text-primary">
+                                    <b>Beranda</b>
+                                </a>
+                            </span>
+
                         </div>
                     </div><!--end card-body-->
                 </div><!--end card-->

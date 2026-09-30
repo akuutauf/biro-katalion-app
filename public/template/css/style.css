@@ -161,6 +161,10 @@ a:focus {
     padding: 25px 0;
 }
 
+.bg-theme-secondary {
+    background-color: #0000 !important;
+}
+
 .page-title-box .page-title {
     font-size: 18px;
     margin: 0;
@@ -9114,14 +9118,8 @@ hr.thick {
     color: #9ba7ca;
 }
 
-.accountbg {
+.bg-auth {
     background-color: #dbe0ec !important;
-}
-
-.account-body.accountbg {
-    /* background-position: center center; */
-    /* width: 100%; */
-    /* height: 120vh; */
 }
 
 .account-body.accountbg .account-title {

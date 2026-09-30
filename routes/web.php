@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'App\Http\Controllers'], function () {
     // Route Landing page dan logout route
     Route::get('/', [LandingPageController::class, 'index'])->name('landing.page');
+    Route::get('/incoming-feature', [LandingPageController::class, 'incoming_feature'])->name('incoming.page');
+    Route::get('/terapis-katalion', [LandingPageController::class, 'terapis_katalion'])->name('terapis.page');
 
     // Route Guest
     Route::group(['middleware' => ['guest']], function () {
@@ -20,13 +22,13 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         Route::post('/login', [AuthController::class, 'do_login'])->name('auth.do.login');
         Route::get('/register', [AuthController::class, 'register'])->name('auth.register.page');
         Route::post('/register', [AuthController::class, 'do_register'])->name('auth.do.register');
-
-        // Route Permohonan Konsul
-        Route::get('/permohonan-konsul', [PermohonanKonsulController::class, 'index'])->name('permohonan.konsul.page');
     });
 
     // Route Auth
     Route::group(['middleware' => ['auth']], function () {
+        // Route Permohonan Konsul
+        Route::get('/permohonan-konsul', [PermohonanKonsulController::class, 'index'])->name('permohonan.konsul.page');
+
         // Route Logout
         Route::get('/logout', [AuthController::class, 'do_logout'])->name('auth.do.logout');
     });

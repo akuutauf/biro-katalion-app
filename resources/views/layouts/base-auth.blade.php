@@ -13,6 +13,11 @@
     {{-- css --}}
     <link rel="stylesheet" href="{{ asset('css/guest.css') }}">
 
+    {{-- Font awesome icon cdn --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- App css -->
     <link href="{{ asset('template/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('template/css/icons.css') }}" rel="stylesheet" type="text/css" />
@@ -21,7 +26,7 @@
 
 </head>
 
-<body class="account-body accountbg">
+<body class="account-body bg-auth">
 
     {{-- custom content on every page --}}
     @yield('content')

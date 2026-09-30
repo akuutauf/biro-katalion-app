@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Agama;
+use App\Models\JenisLayananTes;
 use Illuminate\Http\Request;
 
 class PermohonanKonsulController extends Controller
@@ -11,7 +13,12 @@ class PermohonanKonsulController extends Controller
      */
     public function index()
     {
-        return view('guest.permohonan-konsul');
+        $data = [
+            'agamas' => Agama::all(),
+            'jenis_layanan_tes' => JenisLayananTes::all()
+        ];
+
+        return view('guest.permohonan-konsul', $data);
     }
 
     /**

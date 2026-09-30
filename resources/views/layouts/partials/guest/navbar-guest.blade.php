@@ -12,21 +12,31 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="{{ route('landing.page') }}#hero" class="active">Beranda</a></li>
+                    <li>
+                        <a href="{{ route('landing.page') }}#hero"
+                            class="{{ request()->routeIs('landing.page') ? 'active' : '' }}">
+                            Beranda
+                        </a>
+                    </li>
                     <li><a href="{{ route('landing.page') }}#tentang">Tentang</a></li>
                     <li><a href="{{ route('landing.page') }}#terapi">Terapi</a></li>
                     <li><a href="{{ route('landing.page') }}#asesmen">Asesmen</a></li>
                     <li><a href="{{ route('landing.page') }}#sekolahInklusi">Sekolah Inklusi</a></li>
-                    <li class="dropdown"><a href="#"><span>Menu Lain</span> <i
-                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <li class="dropdown">
+                        <a href="#" id="menuLain"
+                            class="{{ !request()->routeIs('landing.page') ? 'active' : '' }}">
+                            <span>Menu Lain</span>
+                            <i class="bi bi-chevron-down toggle-dropdown"></i>
+                        </a>
+
                         <ul>
                             <li><a href="{{ route('permohonan.konsul.page') }}">Permohonan Konsul</a></li>
-                            <li><a href="#">Fasilitas Katalion</a></li>
-                            <li><a href="#">Terapis Katalion</a></li>
+                            <li><a href="{{ route('incoming.page') }}">Fasilitas Katalion</a></li>
+                            <li><a href="{{ route('terapis.page') }}">Terapis Katalion</a></li>
                             <li><a href="#">Shadow Teacher</a></li>
                             <li><a href="#">Galeri Katalion</a></li>
-                            <li><a href="#">Pricelist Katalion</a></li>
-                            <li><a href="#">Panduan Website</a></li>
+                            <li><a href="{{ route('incoming.page') }}">Pricelist Katalion</a></li>
+                            <li><a href="{{ route('incoming.page') }}">Panduan Website</a></li>
                         </ul>
                     </li>
 

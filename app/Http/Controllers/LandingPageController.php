@@ -14,6 +14,16 @@ class LandingPageController extends Controller
         return view('guest.landing-page');
     }
 
+    public function incoming_feature()
+    {
+        return view('guest.incoming-feature');
+    }
+
+    public function terapis_katalion()
+    {
+        return view('guest.terapis-katalion');
+    }
+
     /**
      * Show the form for creating a new resource.
      */

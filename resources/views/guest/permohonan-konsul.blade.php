@@ -75,11 +75,9 @@
                                         <label for="agama" class="form-label">Agama</label>
                                         <select name="agama" id="agama" class="form-select" required="">
                                             <option value="">Pilih Agama</option>
-                                            <option value="Islam">Islam</option>
-                                            <option value="Kristen">Kristen</option>
-                                            <option value="Hindu">Hindu</option>
-                                            <option value="Budha">Budha</option>
-                                            <option value="Konghucu">Konghucu</option>
+                                            @foreach ($agamas as $item)
+                                                <option value="{{ $item->id }}">{{ $item->nama }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                     <div class="col-md-6">
@@ -127,12 +125,11 @@
                                         <label for="tes_iq" class="form-label">Tes IQ</label>
                                         <select name="tes_iq" id="tes_iq" class="form-select" required="">
                                             <option value="">Pilih Jenis Tes IQ</option>
-                                            <option value="Paud/TK">Paud/TK (RP100.000)</option>
-                                            <option value="SD">SD (RP150.000)</option>
-                                            <option value="SMP">SMP (Rp200.000)</option>
-                                            <option value="SMA">SMA (Rp250.000)</option>
-                                            <option value="Tes Bakat Minat">Tes Bakat Minat (Rp250.000)</option>
-                                            <option value="Tes Kepribadian">Tes Kepribadian (Rp250.000)</option>
+                                            @foreach ($jenis_layanan_tes as $item)
+                                                <option value="{{ $item->id }}">{{ $item->nama }}
+                                                    ({{ formatRupiah($item->harga) }})
+                                                </option>
+                                            @endforeach
                                         </select>
                                     </div>
                                     <div class="col-md-6">

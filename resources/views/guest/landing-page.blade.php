@@ -56,7 +56,7 @@
                         </div>
 
                         <div class="hero-actions" data-aos="fade-right" data-aos-delay="600">
-                            <a href="#" class="btn btn-primary">Mulai Konsultasi</a>
+                            <a href="{{ route('permohonan.konsul.page') }}" class="btn btn-primary">Mulai Konsultasi</a>
                             <a href="https://www.instagram.com/biro_katalion/" target="_blank"
                                 class="btn btn-outline glightbox">
                                 <i class="bi bi-play-circle me-2"></i>
@@ -447,6 +447,37 @@
             </div>
 
         </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('a[href*="#"]');
+
+                function setActiveLink() {
+                    let currentSection = '';
+
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop - 150;
+
+                        if (window.scrollY >= sectionTop) {
+                            currentSection = section.getAttribute('id');
+                        }
+                    });
+
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+
+                        if (link.getAttribute('href').includes('#' + currentSection)) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+
+                window.addEventListener('scroll', setActiveLink);
+
+                setActiveLink();
+            });
+        </script>
 
     </section><!-- /Sekolah Inklusi Section -->
 @endsection

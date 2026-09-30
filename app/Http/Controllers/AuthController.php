@@ -16,9 +16,31 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
-    public function do_login()
+    public function do_login(Request $request)
     {
-        //
+        // validasi input
+        $credentials = $request->validate([
+            'username' => ['required', 'string', 'max:50'],
+            'password' => ['required', 'string'],
+        ]);
+
+        // Proses autentikasi
+        if (Auth::attempt([
+            'name' => $credentials['username'],
+            'password' => $credentials['password'],
+        ])) {
+            // Regenerasi session setelah berhasil login
+            $request->session()->regenerate();
+
+            return redirect()
+                ->intended(route('landing.page'))
+                ->with('success', 'Login berhasil. Selamat datang!');
+        }
+
+        // Jika username atau password salah
+        return back()->withErrors([
+            'username' => 'Username atau password yang Anda masukkan salah.',
+        ])->onlyInput('username');
     }
 
     public function register()
